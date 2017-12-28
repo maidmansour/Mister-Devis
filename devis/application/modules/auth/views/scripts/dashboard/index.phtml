@@ -1,0 +1,194 @@
+<!-- Breadcumbs -->
+<div class="row">
+	<div class="col-md-12">
+		<ul id="breadcrumbs-two">
+			<li><a
+				href="/auth/dashboard/index"><i
+					class="fa fa-home"></i> Tableau de bord</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end breadcumbs -->
+<div class="row">
+	<div class="col-lg-12">
+	<div class="alert alert-info fade in">
+		<button type="button" class="close" data-dismiss="alert"
+			aria-hidden="true">×</button>
+		<i class="fa fa-info-circle fa-fw fa-lg"></i> <strong>Bienvenue sur Mister Devis : votre outil des projets travaux !</strong>
+	</div>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-12">
+		<div class="main-box clearfix project-box green-box">
+			<div class="main-box-body clearfix">
+				<div class="project-box-header red-bg">
+					<div class="name">
+						<a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification"><i
+							class="fa fa-bell-o"></i> <b id="total-all-notif"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b> Notifications <span id="total-notif-notRead"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></span> non lue(s) et <span id="total-notif-read"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></span> lue(s) </a>
+					</div>
+				</div>
+					 <div class="project-box-footer clearfix">
+						<a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/COMMENT">
+							<span class="value"><b id="total-notif-comment"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Commentaires</b></span>
+						</a> <a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/UPLOAD">
+							<span class="value"><b id="total-notif-upload"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Envoi de fichiers</b></span>
+						</a> <a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/NOTE">
+							<span class="value"><b id="total-notif-note"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Notes</b></span>
+						</a>
+					</div>
+					<div class="project-box-footer clearfix">
+						<a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/VAL_BAT">
+							<span class="value"><b id="total-notif-valid"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Validation Devis</b></span>
+						</a> <a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/REF_BAT">
+							<span class="value"><b id="total-notif-refus"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Refus Devis</b></span>
+						</a> <a
+							href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/notification/filter/STATE_BAT">
+							<span class="value"><b id="total-notif-etat"><img src='<?=$this->baseUrl('resources_fo_ehcg/img/loading.gif');?>' /></b></span>
+							<span class="label"><b>Etat Devis</b></span>
+						</a>
+					</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box colored emerald-bg">
+			<a id="show-dossiers-pao" style="color: #fff; cursor: pointer;"><i
+				class="fa fa-files-o"></i> <span class="headline">Pisicne</span> <span
+				class="value" id="total-all-dossiers"><?=$this->countpiscine;?></span></a>
+		</div>
+	</div>
+
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box colored red-bg">
+			<i class="fa fa-user"></i> <span class="headline">Chauffage</span> <span
+				class="value" id="total-all-customers"><?=$this->countchauffage;?></span>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box colored blue-bg">
+			<i class="fa fa-user"></i> <span class="headline">Climatisation</span> <span
+				class="value" id="total-all-contacts"><?=$this->countclimatisation;?></span>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box colored purple-bg">
+			<i class="fa fa-comments-o"></i> <span class="headline">Fenêtre</span>
+			<span class="value" id="total-all-comentsJob"><?=$this->countfenetre;?></span>
+		</div>
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box">
+			<a style="color: #000; cursor: pointer;" href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/Job/index/filtreState/BAT_VAL"><i
+				class="fa fa-thumbs-o-up emerald-bg"></i> <span class="headline">devis
+					qualifié</span> <span class="value"> <span class="timer"
+					data-from="30" data-to="658" data-speed="800"
+					data-refresh-interval="30" id="total-all-batVal"><?=$this->countdevisqualifie;?></span>
+			</span> </a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box">
+			<a style="color: #000; cursor: pointer;" href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/Job/index/filtreState/BAT_RET"><i
+				class="fa fa-thumbs-down red-bg"></i> <span class="headline">devis
+					non qualifié</span> <span class="value"> <span class="timer"
+					data-from="120" data-to="2562" data-speed="1000"
+					data-refresh-interval="50" id="total-all-batRet"><?=$this->countdevisnonqualifie;?></span>
+			</span> </a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box">
+			<a style="color: #000; cursor: pointer;" href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/Job/index/filtreState/BAT_TRT"><i
+				class="fa fa-check blue-bg"></i> <span class="headline">devis NRP</span>
+				<span class="value"><span class="timer" data-from="83"
+					data-to="8400" data-speed="900" data-refresh-interval="60" id="total-all-batTrt"><?=$this->countdevisnrp;?></span>
+			</span> </a>
+		</div>
+	</div>
+	<div class="col-lg-3 col-sm-6 col-xs-12">
+		<div class="main-box infographic-box">
+			<a style="color: #000; cursor: pointer;" href="/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/Job/index/filtreState/BAT_ENV"><i
+				class="fa fa-share-square yellow-bg"></i> <span class="headline">devis
+					tardé</span> <span class="value"> <span class="timer"
+					data-from="539" data-to="12526" data-speed="1100" id="total-all-batEnv"><?=$this->countdevistard;?></span>
+			</span> </a>
+		</div>
+	</div>
+</div>
+
+
+<script type="text/javascript"> 
+		$(document).ready(function() {
+//get statistique notif fab
+			$.ajax({
+				url : "/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/getstatisticnotificationpao",
+					 success : function(data){
+						 var responseNotif = jQuery.parseJSON( data );		
+						$( "#total-all-notif").html(responseNotif.totalAllNotif);
+						$( "#total-notif-notRead").html(responseNotif.totalNotifNotRead);
+						$( "#total-notif-read").html(responseNotif.totalNotifRead);
+						//
+						$( "#total-notif-comment").html(responseNotif.totalNotifComments);
+						$( "#total-notif-upload").html(responseNotif.totalNotifUploads);
+						$( "#total-notif-note").html(responseNotif.totalNotifNotes);
+						//
+						$( "#total-notif-valid").html(responseNotif.totalNotifValidBat);
+						$( "#total-notif-refus").html(responseNotif.totalNotifRefBat);
+						$( "#total-notif-etat").html(responseNotif.totalNotifStateBat);
+										
+					}
+				});
+//get statistique dossiers fab
+$.ajax({
+				url : "/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/getstatisticdossierspao",
+					 success : function(data){
+						 var response = jQuery.parseJSON( data );		
+						$( "#total-all-dossiers").html(response.totalJobs);
+						$( "#total-all-customers").html(response.totalCustomers);
+						$( "#total-all-contacts").html(response.totalContacts);
+						$( "#total-all-comentsJob").html(response.totalComments);
+						//bat
+						$( "#total-all-batVal").html(response.totalBatVal);
+						$( "#total-all-batRet").html(response.totalBatRet);
+						$( "#total-all-batTrt").html(response.totalBatTrt);
+						$( "#total-all-batEnv").html(response.totalBatEnv);
+						$( "#total-all-batAel").html(response.totalBatAel);
+						//
+						$( "#total-all-jobsEncours").html(response.totalJobsEncours);
+						$( "#total-all-jobsLivre").html(response.totalJobLivre);
+						$( "#total-all-jobsEnd").html(response.totalJobTermine);							
+					}
+				});
+//get job pao event
+	$.ajax({
+		url : "/<?=Zend_Registry::get('Zend_Locale')->getLanguage();?>/fo/job/getalljobpaoevent",
+			 success : function(data){		
+					$( "#allevents").html(data);		
+			}
+			});
+		
+//
+	$( "#show-dossiers-pao").click(function() {
+		$( "#btnCMD").click();
+	});
+	
+		});		
+</script>
